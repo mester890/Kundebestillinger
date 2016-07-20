@@ -37,13 +37,8 @@ namespace Main_Application
                 String Purchaseprice = textBox2.Text.ToString();
                 String my_querry = "INSERT INTO test(Navn,Kontakt)VALUES('" + ticketno + "','" + Purchaseprice + "')";
 
-
-
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();
-
-
-
                 MessageBox.Show("Kundebestiling opprettet!");
             }
             catch (Exception ex)
