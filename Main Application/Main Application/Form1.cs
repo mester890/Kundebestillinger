@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace Main_Application
 {
@@ -19,7 +14,23 @@ namespace Main_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tissemann!");
+            appendData();
         }
+
+        private void appendData()
+        {
+
+            Excel.Application excel = new Excel.Application();
+            excel.Visible = true;
+            Excel.Workbook wb = excel.Workbooks.Open("C:\\Users\\Thomas\\Documents\\test.xlsx");
+            Excel.Worksheet sh = wb.Sheets.Add();
+            sh.Name = "test";
+            sh.Cells[1, "A"].Value2 = "SNO";
+            sh.Cells[2, "B"].Value2 = "A";
+            sh.Cells[2, "C"].Value2 = "1122";
+            wb.Close(true);
+            excel.Quit();
+        }
+        
     }
 }
