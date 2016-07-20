@@ -42,6 +42,8 @@ namespace Main_Application
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();
 
+
+
                 MessageBox.Show("Kundebestiling opprettet!");
             }
             catch (Exception ex)
