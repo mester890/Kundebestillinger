@@ -21,6 +21,11 @@ namespace Main_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
+            appendData();   
+        }
+
+        private void appendData()
+        {
             System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
             @"Data source= C:\Users\Public\Documents\test.accdb";
@@ -35,21 +40,16 @@ namespace Main_Application
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Data saved successfuly...!");
+                MessageBox.Show("Kundebestiling opprettet!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed due to" + ex.Message);
+                MessageBox.Show("Noe var galt: " + ex.Message);
             }
             finally
             {
                 conn.Close();
             }
-        }
-
-        private void appendData()
-        {
-
         }
     }
 }
