@@ -22,7 +22,7 @@ namespace Main_Application
 
             Excel.Application excel = new Excel.Application();
             excel.Visible = true;
-            Excel.Workbook wb = excel.Workbooks.Open("C:\\Users\\Thomas\\Documents\\test.xlsx");
+            Excel.Workbook wb = excel.Workbooks.Open("C:\\test.xlsx");
             Excel.Worksheet sh = wb.Sheets.Add();
             sh.Name = "test";
             sh.Cells[1, "A"].Value2 = "SNO";
