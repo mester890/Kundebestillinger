@@ -80,5 +80,11 @@ namespace Main_Application
             Form2 visning = new Form2();
             visning.Show();
         }
+
+        private void oppdaterBestillingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 oppdater = new Form3();
+            oppdater.Show();
+        }
     }
 }

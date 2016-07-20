@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kundebestillingerDataSet = new Main_Application.kundebestillingerDataSet();
-            this.kundebestillingerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kundebestillingerTableAdapter = new Main_Application.kundebestillingerDataSetTableAdapters.kundebestillingerTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.navnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +40,14 @@
             this.kundebehandlerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kommentarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundebestillingerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kundebestillingerDataSet = new Main_Application.kundebestillingerDataSet();
+            this.kundebestillingerTableAdapter = new Main_Application.kundebestillingerDataSetTableAdapters.kundebestillingerTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kundebestillingerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kundebestillingerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kundebestillingerDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,20 +73,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1080, 504);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // kundebestillingerDataSet
-            // 
-            this.kundebestillingerDataSet.DataSetName = "kundebestillingerDataSet";
-            this.kundebestillingerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kundebestillingerBindingSource
-            // 
-            this.kundebestillingerBindingSource.DataMember = "kundebestillinger";
-            this.kundebestillingerBindingSource.DataSource = this.kundebestillingerDataSet;
-            // 
-            // kundebestillingerTableAdapter
-            // 
-            this.kundebestillingerTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -157,6 +145,20 @@
             this.kommentarDataGridViewTextBoxColumn.Name = "kommentarDataGridViewTextBoxColumn";
             this.kommentarDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // kundebestillingerBindingSource
+            // 
+            this.kundebestillingerBindingSource.DataMember = "kundebestillinger";
+            this.kundebestillingerBindingSource.DataSource = this.kundebestillingerDataSet;
+            // 
+            // kundebestillingerDataSet
+            // 
+            this.kundebestillingerDataSet.DataSetName = "kundebestillingerDataSet";
+            this.kundebestillingerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kundebestillingerTableAdapter
+            // 
+            this.kundebestillingerTableAdapter.ClearBeforeFill = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 524);
@@ -167,20 +169,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(112, 529);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Valgt id: ";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 559);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form2";
             this.Text = "Kundebestillinger - Visning";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kundebestillingerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kundebestillingerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kundebestillingerDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -201,5 +214,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kommentarDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

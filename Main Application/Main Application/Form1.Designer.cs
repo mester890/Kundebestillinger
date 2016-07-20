@@ -53,6 +53,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.oppdaterBestillingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,6 +158,7 @@
             // 
             this.filToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visKundebestillingerToolStripMenuItem,
+            this.oppdaterBestillingToolStripMenuItem,
             this.toolStripSeparator1,
             this.avsluttToolStripMenuItem});
             this.filToolStripMenuItem.Name = "filToolStripMenuItem";
@@ -263,6 +265,13 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Eventuell kommentar:";
             // 
+            // oppdaterBestillingToolStripMenuItem
+            // 
+            this.oppdaterBestillingToolStripMenuItem.Name = "oppdaterBestillingToolStripMenuItem";
+            this.oppdaterBestillingToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.oppdaterBestillingToolStripMenuItem.Text = "Oppdater bestilling";
+            this.oppdaterBestillingToolStripMenuItem.Click += new System.EventHandler(this.oppdaterBestillingToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,6 +335,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ToolStripMenuItem oppdaterBestillingToolStripMenuItem;
     }
 }
 

@@ -29,5 +29,16 @@ namespace Main_Application
             this.kundebestillingerTableAdapter.Fill(this.kundebestillingerDataSet.kundebestillinger);
 
         }
+
+
+        public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            string selectedID = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
+            //Form3 frm3 = new Form3();
+            label1.Text = "Valgt id: " + selectedID;
+            //frm3.textBox1.Text = selectedID;
+        }
+
     }
 }
