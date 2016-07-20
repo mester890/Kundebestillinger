@@ -26,17 +26,24 @@ namespace Main_Application
 
         private void appendData()
         {
-            System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
+            OleDbConnection conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-            @"Data source= C:\Users\Public\Documents\test.accdb";
+            @"Data source= C:\Users\Public\Documents\kundebestillinger.accdb";
 
             try
             {
                 conn.Open();
-                String ticketno = textBox1.Text.ToString();
-                String Purchaseprice = textBox2.Text.ToString();
-                String my_querry = "INSERT INTO test(Navn,Kontakt)VALUES('" + ticketno + "','" + Purchaseprice + "')";
-
+                String navn = textBox1.Text.ToString();
+                String telefon = textBox2.Text.ToString();
+                String varekode = textBox3.Text.ToString();
+                String beskrivelse = textBox4.Text.ToString();
+                String leverandor = textBox5.Text.ToString();
+                String dato = dateTimePicker1.Text.ToString();
+                String kundebehandler = comboBox1.Text.ToString();
+                String status = comboBox2.Text.ToString();
+                String kommentar = richTextBox1.Text.ToString();
+                String my_querry = "INSERT INTO kundebestillinger(navn,telefon,varekode,beskrivelse,leverandor,dato,kundebehandler,status,kommentar)VALUES('" + navn + "','" + telefon + "','" + varekode + "','" + beskrivelse + "','" + leverandor + "','" + dato + "','" + kundebehandler + "','" + status + "','" + kommentar + "')";
+                
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Kundebestiling opprettet!");
@@ -49,6 +56,23 @@ namespace Main_Application
             {
                 conn.Close();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            richTextBox1.Text = "";
+        }
+
+        private void avsluttToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
