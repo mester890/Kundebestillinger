@@ -74,5 +74,11 @@ namespace Main_Application
         {
             Application.Exit();
         }
+
+        private void visKundebestillingerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 visning = new Form2();
+            visning.Show();
+        }
     }
 }

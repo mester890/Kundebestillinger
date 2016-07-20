@@ -168,6 +168,7 @@
             this.visKundebestillingerToolStripMenuItem.Name = "visKundebestillingerToolStripMenuItem";
             this.visKundebestillingerToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.visKundebestillingerToolStripMenuItem.Text = "Vis kundebestillinger";
+            this.visKundebestillingerToolStripMenuItem.Click += new System.EventHandler(this.visKundebestillingerToolStripMenuItem_Click);
             // 
             // avsluttToolStripMenuItem
             // 
