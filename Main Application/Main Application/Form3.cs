@@ -31,12 +31,13 @@ namespace Main_Application
         }
 
 
-        private void orderUpdate()
+        public void orderUpdate()
         {
             OleDbConnection conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
             @"Data source= C:\Users\Public\Documents\kundebestillinger.accdb";
 
+            Form2 frm2 = new Form2();
 
 
             try
@@ -44,7 +45,7 @@ namespace Main_Application
                 conn.Open();
                 String navn = textBox1.Text.ToString();
                 String telefon = textBox2.Text.ToString();
-                String my_querry = "UPDATE kundebestillinger SET navn = '" + navn +"' WHERE id = '";
+                String my_querry = "UPDATE kundebestillinger SET navn = '" + navn + "'";
 
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();

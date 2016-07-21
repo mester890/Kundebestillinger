@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,15 +31,18 @@ namespace Main_Application
 
         }
 
-
+        public string selectedID;
         public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            string selectedID = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
-            //Form3 frm3 = new Form3();
+            selectedID = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
+            Form3 frm3 = new Form3(selectedID.ToString);
             label1.Text = "Valgt id: " + selectedID;
             //frm3.textBox1.Text = selectedID;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
