@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.kundebestillingerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kundebestillingerDataSet = new Main_Application.kundebestillingerDataSet();
@@ -294,6 +295,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "OrderMe - Visning";
             this.Load += new System.EventHandler(this.Form2_Load);

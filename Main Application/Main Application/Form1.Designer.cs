@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -42,8 +43,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visKundebestillingerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.avsluttToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oppdaterBestillingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.avsluttToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +55,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.oppdaterBestillingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,17 +173,24 @@
             this.visKundebestillingerToolStripMenuItem.Text = "Vis kundebestillinger";
             this.visKundebestillingerToolStripMenuItem.Click += new System.EventHandler(this.visKundebestillingerToolStripMenuItem_Click);
             // 
+            // oppdaterBestillingToolStripMenuItem
+            // 
+            this.oppdaterBestillingToolStripMenuItem.Name = "oppdaterBestillingToolStripMenuItem";
+            this.oppdaterBestillingToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.oppdaterBestillingToolStripMenuItem.Text = "Oppdater bestilling";
+            this.oppdaterBestillingToolStripMenuItem.Click += new System.EventHandler(this.oppdaterBestillingToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(180, 6);
+            // 
             // avsluttToolStripMenuItem
             // 
             this.avsluttToolStripMenuItem.Name = "avsluttToolStripMenuItem";
             this.avsluttToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.avsluttToolStripMenuItem.Text = "Avslutt";
             this.avsluttToolStripMenuItem.Click += new System.EventHandler(this.avsluttToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(180, 6);
             // 
             // label1
             // 
@@ -265,13 +273,6 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Eventuell kommentar:";
             // 
-            // oppdaterBestillingToolStripMenuItem
-            // 
-            this.oppdaterBestillingToolStripMenuItem.Name = "oppdaterBestillingToolStripMenuItem";
-            this.oppdaterBestillingToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.oppdaterBestillingToolStripMenuItem.Text = "Oppdater bestilling";
-            this.oppdaterBestillingToolStripMenuItem.Click += new System.EventHandler(this.oppdaterBestillingToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +299,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "OrderMe";
