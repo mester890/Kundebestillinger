@@ -15,7 +15,7 @@ namespace Main_Application
 {
     public partial class Form1 : Form
     {
-        public string myConnectionString = "server=localhost;database=kundebestillinger;uid=root;pwd=toor;";
+        public string myConnectionString = "server=88.88.150.12;database=kundebestillinger;uid=testbruker;pwd=1234;";
 
 
         public Form1()

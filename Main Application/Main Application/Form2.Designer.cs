@@ -30,16 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.navnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.varekodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beskrivelseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leverandorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kundebehandlerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kommentarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kundebestillingerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kundebestillingerDataSet = new Main_Application.kundebestillingerDataSet();
             this.kundebestillingerTableAdapter = new Main_Application.kundebestillingerDataSetTableAdapters.kundebestillingerTableAdapter();
@@ -56,6 +46,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.navnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.varekodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beskrivelseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leverandorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundebehandlerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kommentarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kundebestillingerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kundebestillingerDataSet)).BeginInit();
@@ -85,76 +85,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1080, 481);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // navnDataGridViewTextBoxColumn
-            // 
-            this.navnDataGridViewTextBoxColumn.DataPropertyName = "navn";
-            this.navnDataGridViewTextBoxColumn.HeaderText = "navn";
-            this.navnDataGridViewTextBoxColumn.Name = "navnDataGridViewTextBoxColumn";
-            this.navnDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonDataGridViewTextBoxColumn
-            // 
-            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
-            this.telefonDataGridViewTextBoxColumn.HeaderText = "telefon";
-            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
-            this.telefonDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // varekodeDataGridViewTextBoxColumn
-            // 
-            this.varekodeDataGridViewTextBoxColumn.DataPropertyName = "varekode";
-            this.varekodeDataGridViewTextBoxColumn.HeaderText = "varekode";
-            this.varekodeDataGridViewTextBoxColumn.Name = "varekodeDataGridViewTextBoxColumn";
-            this.varekodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // beskrivelseDataGridViewTextBoxColumn
-            // 
-            this.beskrivelseDataGridViewTextBoxColumn.DataPropertyName = "beskrivelse";
-            this.beskrivelseDataGridViewTextBoxColumn.HeaderText = "beskrivelse";
-            this.beskrivelseDataGridViewTextBoxColumn.Name = "beskrivelseDataGridViewTextBoxColumn";
-            this.beskrivelseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // leverandorDataGridViewTextBoxColumn
-            // 
-            this.leverandorDataGridViewTextBoxColumn.DataPropertyName = "leverandor";
-            this.leverandorDataGridViewTextBoxColumn.HeaderText = "leverandor";
-            this.leverandorDataGridViewTextBoxColumn.Name = "leverandorDataGridViewTextBoxColumn";
-            this.leverandorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datoDataGridViewTextBoxColumn
-            // 
-            this.datoDataGridViewTextBoxColumn.DataPropertyName = "dato";
-            this.datoDataGridViewTextBoxColumn.HeaderText = "dato";
-            this.datoDataGridViewTextBoxColumn.Name = "datoDataGridViewTextBoxColumn";
-            this.datoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // kundebehandlerDataGridViewTextBoxColumn
-            // 
-            this.kundebehandlerDataGridViewTextBoxColumn.DataPropertyName = "kundebehandler";
-            this.kundebehandlerDataGridViewTextBoxColumn.HeaderText = "kundebehandler";
-            this.kundebehandlerDataGridViewTextBoxColumn.Name = "kundebehandlerDataGridViewTextBoxColumn";
-            this.kundebehandlerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // kommentarDataGridViewTextBoxColumn
-            // 
-            this.kommentarDataGridViewTextBoxColumn.DataPropertyName = "kommentar";
-            this.kommentarDataGridViewTextBoxColumn.HeaderText = "kommentar";
-            this.kommentarDataGridViewTextBoxColumn.Name = "kommentarDataGridViewTextBoxColumn";
-            this.kommentarDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // kundebestillingerBindingSource
             // 
@@ -275,6 +205,76 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // navnDataGridViewTextBoxColumn
+            // 
+            this.navnDataGridViewTextBoxColumn.DataPropertyName = "navn";
+            this.navnDataGridViewTextBoxColumn.HeaderText = "Navn";
+            this.navnDataGridViewTextBoxColumn.Name = "navnDataGridViewTextBoxColumn";
+            this.navnDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonDataGridViewTextBoxColumn
+            // 
+            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
+            this.telefonDataGridViewTextBoxColumn.HeaderText = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
+            this.telefonDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // varekodeDataGridViewTextBoxColumn
+            // 
+            this.varekodeDataGridViewTextBoxColumn.DataPropertyName = "varekode";
+            this.varekodeDataGridViewTextBoxColumn.HeaderText = "Varekode";
+            this.varekodeDataGridViewTextBoxColumn.Name = "varekodeDataGridViewTextBoxColumn";
+            this.varekodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // beskrivelseDataGridViewTextBoxColumn
+            // 
+            this.beskrivelseDataGridViewTextBoxColumn.DataPropertyName = "beskrivelse";
+            this.beskrivelseDataGridViewTextBoxColumn.HeaderText = "Beskrivelse";
+            this.beskrivelseDataGridViewTextBoxColumn.Name = "beskrivelseDataGridViewTextBoxColumn";
+            this.beskrivelseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // leverandorDataGridViewTextBoxColumn
+            // 
+            this.leverandorDataGridViewTextBoxColumn.DataPropertyName = "leverandor";
+            this.leverandorDataGridViewTextBoxColumn.HeaderText = "Leverandør";
+            this.leverandorDataGridViewTextBoxColumn.Name = "leverandorDataGridViewTextBoxColumn";
+            this.leverandorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datoDataGridViewTextBoxColumn
+            // 
+            this.datoDataGridViewTextBoxColumn.DataPropertyName = "dato";
+            this.datoDataGridViewTextBoxColumn.HeaderText = "Dato";
+            this.datoDataGridViewTextBoxColumn.Name = "datoDataGridViewTextBoxColumn";
+            this.datoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kundebehandlerDataGridViewTextBoxColumn
+            // 
+            this.kundebehandlerDataGridViewTextBoxColumn.DataPropertyName = "kundebehandler";
+            this.kundebehandlerDataGridViewTextBoxColumn.HeaderText = "Kundebehandler";
+            this.kundebehandlerDataGridViewTextBoxColumn.Name = "kundebehandlerDataGridViewTextBoxColumn";
+            this.kundebehandlerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kommentarDataGridViewTextBoxColumn
+            // 
+            this.kommentarDataGridViewTextBoxColumn.DataPropertyName = "kommentar";
+            this.kommentarDataGridViewTextBoxColumn.HeaderText = "Kommentar";
+            this.kommentarDataGridViewTextBoxColumn.Name = "kommentarDataGridViewTextBoxColumn";
+            this.kommentarDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,16 +309,6 @@
         private kundebestillingerDataSet kundebestillingerDataSet;
         private System.Windows.Forms.BindingSource kundebestillingerBindingSource;
         private kundebestillingerDataSetTableAdapters.kundebestillingerTableAdapter kundebestillingerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn navnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn varekodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn beskrivelseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn leverandorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kundebehandlerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kommentarDataGridViewTextBoxColumn;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -333,5 +323,15 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn navnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn varekodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn beskrivelseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leverandorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kundebehandlerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kommentarDataGridViewTextBoxColumn;
     }
 }
