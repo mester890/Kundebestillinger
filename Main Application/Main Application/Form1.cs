@@ -83,8 +83,6 @@ namespace Main_Application
 
         private void oppdaterBestillingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 oppdater = new Form3();
-            oppdater.Show();
         }
     }
 }
