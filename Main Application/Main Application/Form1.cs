@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,9 @@ namespace Main_Application
 {
     public partial class Form1 : Form
     {
+        public string myConnectionString = "server=localhost;database=kundebestillinger;uid=root;pwd=toor;";
+
+
         public Form1()
         {
             InitializeComponent();
@@ -26,10 +30,9 @@ namespace Main_Application
 
         private void appendData()
         {
-            OleDbConnection conn = new OleDbConnection();
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-            @"Data source= C:\Users\Public\Documents\kundebestillinger.accdb";
 
+            MySqlConnection conn;
+            conn = new MySqlConnection(myConnectionString);
             try
             {
                 conn.Open();
@@ -43,10 +46,12 @@ namespace Main_Application
                 String status = comboBox2.Text.ToString();
                 String kommentar = richTextBox1.Text.ToString();
                 String my_querry = "INSERT INTO kundebestillinger(navn,telefon,varekode,beskrivelse,leverandor,dato,kundebehandler,status,kommentar)VALUES('" + navn + "','" + telefon + "','" + varekode + "','" + beskrivelse + "','" + leverandor + "','" + dato + "','" + kundebehandler + "','" + status + "','" + kommentar + "')";
-                
-                OleDbCommand cmd = new OleDbCommand(my_querry, conn);
+
+
+                MySqlCommand cmd = new MySqlCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Kundebestiling opprettet!");
+
             }
             catch (Exception ex)
             {
@@ -56,6 +61,7 @@ namespace Main_Application
             {
                 conn.Close();
             }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -83,6 +89,8 @@ namespace Main_Application
 
         private void oppdaterBestillingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form3 frm3 = new Form3();
+            frm3.Show();
         }
     }
 }

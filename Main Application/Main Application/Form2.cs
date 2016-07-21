@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,22 +15,44 @@ namespace Main_Application
 {
     public partial class Form2 : Form
     {
+        Form1 frm1 = new Form1();
+
+
         public Form2()
         {
             InitializeComponent();
+            getRecords();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'kundebestillingerDataSet.kundebestillinger' table. You can move, or remove it, as needed.
-            this.kundebestillingerTableAdapter.Fill(this.kundebestillingerDataSet.kundebestillinger);
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.kundebestillingerTableAdapter.Fill(this.kundebestillingerDataSet.kundebestillinger);
 
+        }
+
+        private void getRecords()
+        {
+            MySqlConnection con = new MySqlConnection(frm1.myConnectionString);
+            con.Open();
+            MySqlCommand command = new MySqlCommand();
+
+            command.Connection = con;
+            MySqlDataAdapter MyDA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from kundebestillinger";
+            MyDA.SelectCommand = new MySqlCommand(sqlSelectAll, con);
+
+            DataTable table = new DataTable();
+            MyDA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+
+            dataGridView1.DataSource = bSource;
         }
 
         public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -58,9 +82,9 @@ namespace Main_Application
 
         public void updateRecord()
         {
-            OleDbConnection conn = new OleDbConnection();
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-            @"Data source= C:\Users\Public\Documents\kundebestillinger.accdb";
+            MySqlConnection conn;
+            conn = new MySqlConnection(frm1.myConnectionString);
+
 
             try
             {
@@ -85,9 +109,11 @@ namespace Main_Application
                     "', status = '" + status + 
                     "', kommentar = '" + kommentar + "' WHERE ID = " + id +"";
 
-                OleDbCommand cmd = new OleDbCommand(my_querry, conn);
+                MySqlCommand cmd = new MySqlCommand(my_querry, conn);
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Kundebestiling oppdatert!");
+                getRecords();
             }
             catch (Exception ex)
             {
@@ -97,7 +123,6 @@ namespace Main_Application
             {
                 conn.Close();
             }
-            this.kundebestillingerTableAdapter.Fill(this.kundebestillingerDataSet.kundebestillinger);
 
         }
 
@@ -107,9 +132,8 @@ namespace Main_Application
         }
         public void deleteRecord()
         {
-            OleDbConnection conn = new OleDbConnection();
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-            @"Data source= C:\Users\Public\Documents\kundebestillinger.accdb";
+            MySqlConnection conn;
+            conn = new MySqlConnection(frm1.myConnectionString);
 
             try
             {
@@ -124,11 +148,12 @@ namespace Main_Application
                 String kundebehandler = comboBox1.Text.ToString();
                 String status = comboBox2.Text.ToString();
                 String kommentar = richTextBox1.Text.ToString();
-                String my_querry = "DELETE * FROM kundebestillinger WHERE ID = " + id;
+                String my_querry = "DELETE FROM kundebestillinger WHERE ID = " + id;
 
-                OleDbCommand cmd = new OleDbCommand(my_querry, conn);
+                MySqlCommand cmd = new MySqlCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Kundebestiling slettet!");
+                getRecords();
             }
             catch (Exception ex)
             {
@@ -138,8 +163,12 @@ namespace Main_Application
             {
                 conn.Close();
             }
-            this.kundebestillingerTableAdapter.Fill(this.kundebestillingerDataSet.kundebestillinger);
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            getRecords();
         }
     }
 }
